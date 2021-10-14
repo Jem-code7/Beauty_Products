@@ -1,0 +1,31 @@
+.navbar .navbar-brand {
+    width: 80px;
+}
+
+.navbar .cart-logo {
+    width: 10px;
+}
+
+.ff-andada {
+    font-family: 'Andada Pro', serif;
+}
+
+.ff-cookie {
+    font-family: 'Cookie', cursive;
+}
+
+.green-bg {
+    background-color: rgb(1, 252, 252);
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.black-color {
+    color: black;
+}
+
+.gray-color {
+    color: gray;
+}
