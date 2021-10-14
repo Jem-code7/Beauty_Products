@@ -9,19 +9,24 @@
     <?php include './section_template/heading.php' ?>
 
     <main class="main-site">
+
         <section class="banner-area">
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <img src="./img/banner-1.png" alt="banner1">
+                    <img src="./img/wide-banner/banner.png" alt="banner">
                 </div>
                 <div class="item">
-                    <img src="./img/banner-2.png" alt="banner2">
+                    <img src="./img/wide-banner/banner-1.png" alt="banner1">
                 </div>
                 <div class="item">
-                    <img src="./img/banner-3.png" alt="banner3">
+                    <img src="./img/wide-banner/banner-2.png" alt="banner2">
+                </div>
+                <div class="item">
+                    <img src="./img/wide-banner/banner-3.png" alt="banner3">
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Bootstrap JS CDN -->
@@ -31,8 +36,7 @@
     <!-- Owl Carousel JS CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
 
-    <!-- Isotope.jQuery Plugin CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+    <script src="./js/owl-carousel.js"></script>
     
 </body>
 </html>
