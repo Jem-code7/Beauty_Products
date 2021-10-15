@@ -1,17 +1,19 @@
 <?php
 
-class banner
+class Banner
 {
-      public $db = null;
-
-      public function __construct(DbConnection $db)
+      public function txt_link($initial)
       {
-            if(!isset($db->con)) return null;
-            $this->db = $db;
-      }
+            $afile = fopen("./txt/banner.txt", "r");
+            $file = fread($afile,filesize("./txt/banner.txt"));
+            $end_sign = $initial . "end";
+            fclose($afile);
 
-      public function getW_Banner($a_id = ['1', '2', '3'])
-      {
+            $start = stripos($file, $initial);
+            $start += 3;
             
+            $end = strpos(substr($file, $start, strlen($file)), $end_sign);
+
+            return substr($file, $start, $end);
       }
 }

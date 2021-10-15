@@ -5,26 +5,17 @@
 </head>
 
 <body>
-    <p><?php $db?></p>
-
     <?php include './section_template/heading.php' ?>
 
     <main class="main-site">
 
         <section class="banner-area">
             <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src="https://s9.gifyu.com/images/banner-1.png" alt="banner 1">
-                </div>
-                <div class="item">
-                    <img src="https://s9.gifyu.com/images/banner-2.png" alt="banner1">
-                </div>
-                <div class="item">
-                    <img src="https://s9.gifyu.com/images/banner-3.png" alt="banner2">
-                </div>
-                <div class="item">
-                    <img src="https://s9.gifyu.com/images/banner5268af81b983baaf.jpg" alt="banner3">
-                </div>
+                <?php for ($i=1; $i <= $banner->txt_link("::i"); $i++) : ?>
+                    <div class="item">
+                        <img src="<?php echo $banner->txt_link("::$i"); ?>" alt="banner <?php echo $i ?>">
+                    </div>
+                <?php endfor ?>
             </div>
         </section>
 
