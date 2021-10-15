@@ -1,5 +1,6 @@
 ::i4::iend
-::1https://s9.gifyu.com/images/banner-1.png::1end
-::2https://s9.gifyu.com/images/banner-2.png::2end
-::3https://s9.gifyu.com/images/banner-3.png::3end
-::4https://s9.gifyu.com/images/banner-2.png::4end
+::1https://s9.gifyu.com/images/banner-4.jpg::1end
+::2https://s9.gifyu.com/images/banner-39933b6d7645b8873.jpg::2end
+::3https://s9.gifyu.com/images/banner-24456e6c51dd9e472.jpg::3end
+::4https://s9.gifyu.com/images/banner-11f1f39d908d5898a.jpg::4end
+
