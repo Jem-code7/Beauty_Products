@@ -21,3 +21,5 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Cookie&display=swap" rel="stylesheet">
     
+    <!-- Database - Supabase(Postgres) -->
+    <?php require ('./eventhandler_DB/DBEventHandler.php') ?>
