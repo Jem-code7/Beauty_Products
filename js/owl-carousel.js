@@ -12,4 +12,9 @@ $(document).ready(function() {
         items: 4,
         nav: true
     });
+
+    var $grid = $(".grid").isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+    });
 });

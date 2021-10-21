@@ -1,3 +1,7 @@
+.grid .products img {
+    width: 30px;
+}
+
 .navbar .navbar-brand {
     width: 80px;
 }
