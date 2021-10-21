@@ -6,4 +6,10 @@ $(document).ready(function() {
         items: 1,
         loop: true
     });
+
+    $(".brands-area .owl-carousel").owlCarousel({
+        dots: false,
+        items: 4,
+        nav: true
+    });
 });
