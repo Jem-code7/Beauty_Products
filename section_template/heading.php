@@ -33,7 +33,7 @@
                   <button class="btn btn-outline-success" type="submit">Search</button>
                   <!-- Cart Icon -->
                   <a href="./cart.php" class="cart-logo px-2 py-2 rounded-pill white-bg">
-                  <span class="fs-heading2 px-2 border border-primary gray-color"><i class="fas fa-shopping-cart"></i></span>
+                  <span class="fs-heading2 px-2 gray-color"><i class="fas fa-shopping-cart"></i></span>
                   <span class="px-3 py-2 rounded-pill black-color white-bg">0</span>
                   </a>
             </form>

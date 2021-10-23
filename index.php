@@ -18,21 +18,21 @@
                <div class="px-2">
                 <div class="owl-carousel owl-theme">
                     <?php for ($i=0; $i < 5; $i++) :?>
-                        <div class="item py-2">
-                            <div class="products">
-                                <a href=""><img src="./img/brand- brilliant.png" alt="product" class="img-fluid"></a>
+                        <div class="item">
+                            <div class="products text-center">
+                                <a href=""><img src="./img/brand- brilliant.png" alt="product" class="rounded mx-auto d-block"></a>
                                 <h6>brand1</h6>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="products">
-                                <a href=""><img src="./img/brand-abonne.jfif" alt="" class="img-fluid"></a>
+                            <div class="products text-center">
+                                <a href=""><img src="./img/brand-abonne.jfif" alt="" class="rounded mx-auto d-block"></a>
                                 <h6>brand2</h6>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="products">
-                                <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
+                            <div class="products text-center">
+                                <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="rounded mx-auto d-block"></a>
                                 <h6>brand3</h6>
                             </div>
                         </div>
@@ -43,15 +43,18 @@
        </section>
 
        <section class="products-area">
-           <div class="container py-5">
+           <div class="container-fluid py-5 w-75">
                <div class="grid">
                     <?php for ($i=0; $i < 100; $i++) : ?>
-                        <div class="grid-item border m-3 p-2">
+                        <div class="grid-item border m-2 p-2 text-center">
                             <div class="item py-2">
-                            <div class="products">
-                                <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                                <h6>brand3</h6>
-                            </div>
+                                <div class="products">
+                                    <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
+                                    <h6>brand3</h6>
+                                    <form>
+                                        <button type="submit" class="btn btn-warning">Add to Cart</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     <?php endfor ?>
