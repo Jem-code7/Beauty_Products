@@ -8,12 +8,12 @@ $(document).ready(function() {
     });
 
     $(".brands-area .owl-carousel").owlCarousel({
-        dots: false,
-        items: 4,
+        dots: true,
+        items: 10,
         nav: true
     });
 
-    var $grid = $(".grid").isotope({
+    $(".grid").isotope({
         itemSelector: '.grid-item',
         layoutMode: 'fitRows'
     });

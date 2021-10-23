@@ -3,6 +3,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/heading.css">
     <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/brand.css">
 </head>
 
 <body>
@@ -11,28 +12,32 @@
     <main class="main-site">
         <?php include './section_template/w_banner.php'?>
 
-       <section class="brands-area">
+       <section class="brands-area px-5">
            <h3>Brands</h3>
-           <div class="container-fluid py-5. border border-secondary">
-               <div class="owl-carousel owl-theme">
-                   <div class="item">
-                       <div class="products">
-                           <a href=""><img src="./img/brand- brilliant.png" alt="product" class="img-fluid"></a>
-                           <h6>brand1</h6>
-                       </div>
-                   </div>
-                   <div class="item">
-                       <div class="products">
-                           <a href=""><img src="./img/brand-abonne.jfif" alt="" class="img-fluid"></a>
-                           <h6>brand2</h6>
-                       </div>
-                   </div>
-                   <div class="item">
-                       <div class="products">
-                           <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                           <h6>brand3</h6>
-                       </div>
-                   </div>
+           <div class="container-fluid py-3 border-top border-bottom border-secondary">
+               <div class="px-2">
+                <div class="owl-carousel owl-theme">
+                    <?php for ($i=0; $i < 5; $i++) :?>
+                        <div class="item py-2">
+                            <div class="products">
+                                <a href=""><img src="./img/brand- brilliant.png" alt="product" class="img-fluid"></a>
+                                <h6>brand1</h6>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="products">
+                                <a href=""><img src="./img/brand-abonne.jfif" alt="" class="img-fluid"></a>
+                                <h6>brand2</h6>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="products">
+                                <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
+                                <h6>brand3</h6>
+                            </div>
+                        </div>
+                    <?php endfor ?>
+                </div>
                </div>
            </div>
        </section>
@@ -40,166 +45,16 @@
        <section class="products-area">
            <div class="container py-5">
                <div class="grid">
-                    <div class="grid-item border">
-                        <div class="item py-2">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
+                    <?php for ($i=0; $i < 100; $i++) : ?>
+                        <div class="grid-item border m-3 p-2">
+                            <div class="item py-2">
+                            <div class="products">
+                                <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
+                                <h6>brand3</h6>
+                            </div>
+                            </div>
                         </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
-                    <div class="grid-item border">
-                        <div class="item">
-                           <div class="products">
-                               <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
-                               <h6>brand3</h6>
-                           </div>
-                        </div>
-                   </div>
+                    <?php endfor ?>
                </div>
            </div>
        </section>
