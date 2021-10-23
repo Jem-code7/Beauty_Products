@@ -44,8 +44,9 @@
 
        <section class="products-area">
            <div class="container-fluid py-5 w-75">
+               <h3>Most Buy</h3>
                <div class="grid">
-                    <?php for ($i=0; $i < 100; $i++) : ?>
+                    <?php for ($i=0; $i < 10; $i++) : ?>
                         <div class="grid-item border m-2 p-2 text-center">
                             <div class="item py-2">
                                 <div class="products">
@@ -61,6 +62,44 @@
                </div>
            </div>
        </section>
+
+       <footer class="footer py-5 black-bg">
+           <div class="container-fluid w-75">
+               <div class="row">
+                   <div class="col-lg-5 col-12 text-white">
+                       <h4>Shop Name</h4>
+                       <a class="navbar-brand" href="#"><img src="img/logo-removebg-preview.png" class="img-fluid"></a>
+                   </div>
+                   <div class="col-lg-2 col-12 text-white">
+                       <h4>Sponsors</h4>
+                       <div class="d-flex flex-column flex-wrap anchors">
+                                <a href="#">About Us</a>
+                                <a href="#">Delivery Information</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Term and Conditions</a>
+                            </div>
+                   </div>
+                   <div class="col-lg-2 col-12 text-white">
+                        <h4>Information</h4>
+                        <div class="d-flex flex-column flex-wrap anchors">
+                            <a href="#">About Us</a>
+                            <a href="#">Delivery Information</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Term and Conditions</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12 text-white">
+                        <h4>Account</h4>
+                        <div class="d-flex flex-column flex-wrap anchors">
+                            <a href="#">My Account</a>
+                            <a href="#">Order History</a>
+                            <a href="#">Wish List</a>
+                            <a href="#">Notifications</a>
+                        </div>
+                    </div>
+               </div>
+           </div>
+       </footer>
     </main>
 
     <!-- Bootstrap JS CDN -->

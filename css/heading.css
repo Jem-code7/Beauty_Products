@@ -6,6 +6,14 @@
     width: 10px;
 }
 
+.navbar .icons a:hover {
+    text-decoration: none;
+}
+
+.navbar .icons .cart-logo:hover .fas {
+    filter:brightness(50%);
+}
+
 .ff-andada {
     font-family: 'Andada Pro', serif;
 }
@@ -22,8 +30,16 @@
     background-color: white;
 }
 
+.black-bg {
+    background-color:black;
+}
+
 .black-color {
     color: black;
+}
+
+.white-color {
+    color: white;
 }
 
 .gray-color {
