@@ -47,10 +47,10 @@
                <h3>Most Buy</h3>
                <div class="grid">
                     <?php for ($i=0; $i < 10; $i++) : ?>
-                        <div class="grid-item border m-2 p-2 text-center">
+                        <div class="grid-item border p-2 text-center rounded">
                             <div class="item py-2">
                                 <div class="products">
-                                    <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid"></a>
+                                    <a href=""><img src="./img/brand-skinmagical.jfif" alt="" class="img-fluid rounded"></a>
                                     <h6>brand3</h6>
                                     <form>
                                         <button type="submit" class="btn btn-warning">Add to Cart</button>

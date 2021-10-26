@@ -5,17 +5,21 @@ $(document).ready(function() {
         items: 1,
         loop: true,
         autoplay: true,
-        dots: false
+        dots: false,
+        mouseDrag: false
     });
-
+    
     $(".brands-area .owl-carousel").owlCarousel({
         dots: true,
         items: 10,
+        autoplay: true,
         rewind: true
     });
 
     $(".grid").isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows'
-    });
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows'
+});
+
+    
 });

@@ -1,6 +1,7 @@
-::i4::iend
-::1https://s9.gifyu.com/images/banner-4.jpg::1end
-::2https://s9.gifyu.com/images/banner-39933b6d7645b8873.jpg::2end
-::3https://s9.gifyu.com/images/banner-24456e6c51dd9e472.jpg::3end
-::4https://s9.gifyu.com/images/banner-11f1f39d908d5898a.jpg::4end
+::i5::iend
+::1https://www.skinmagicalph.com/wp-content/uploads/2019/06/Banner02.jpg::1end
+::2https://brilliantskinessentials.ph/wp-content/uploads/2020/09/BSE_Web_Slider_Models-scaled.jpg::2end
+::3https://www.skinmagicalph.com/wp-content/uploads/2019/06/Banner_01.jpg::3end
+::4https://www.dralisonblack.com/wp-content/uploads/2020/04/brilliant-connections-webhead-1.jpg::4end
+::5https://businessfirstfamily.com/wp-content/uploads/2017/04/sale-banners-tips-business-owners.jpg::5end
 

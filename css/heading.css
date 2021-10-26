@@ -14,6 +14,18 @@
     filter:brightness(50%);
 }
 
+.products-area .container-fluid .grid .grid-item {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+.products-area .container-fluid .grid img {
+    width: 120px;
+}
+
+.products-area .container-fluid .item {
+    width: 300px;
+}
+
 .ff-andada {
     font-family: 'Andada Pro', serif;
 }
