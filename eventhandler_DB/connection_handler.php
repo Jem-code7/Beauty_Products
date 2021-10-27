@@ -1,6 +1,6 @@
 <?php
 
-class DBConnection
+class connection_handler
 {
       protected $host = 'remotemysql.com';
       protected $user = 'CkWQyfkHF7';

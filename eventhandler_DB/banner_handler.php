@@ -2,6 +2,14 @@
 
 class Banner
 {
+      public $db = null;
+
+      public function __construct(connection_handler $db)
+      {
+            if(!isset($db->con)) return null;
+            $this->db = $db;
+      }
+
       public function txt_link($initial)
       {
             $afile = fopen("./txt/banner.txt", "r");

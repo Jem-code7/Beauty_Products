@@ -26,4 +26,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/design.css">
+
+    <!-- Database Connection -->
+    <?php require './eventhandler_DB/DBEventHandler.php' ?>
 </head>
