@@ -26,5 +26,4 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/design.css">
-    <link rel="stylesheet" href="./css/test.css">
 </head>
