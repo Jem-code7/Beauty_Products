@@ -1,14 +1,27 @@
-.most-buy .grid .products img
+.most-buy a{
+      color: black;
+      text-decoration: none;
+}
+
+.most-buy a:hover .frame{
+      background: rgba(255, 255, 255, 0.849);
+      border-color: rgb(255, 118, 202);
+}
+
+.most-buy .products img
 {
       width: 200px;
       height: 200px;
       margin-bottom: 10px;
 }
 
-.most-buy .grid .grid-item {
-      margin-right: 1.5rem;
+.most-buy .frame {
+      margin-right: 1.7rem;
       margin-top: 1rem;
       width: 22%;
+      border: 1px solid;
+      border-color: gray;
+      background: rgba(255, 255, 255, 0.438);
 }
 
   

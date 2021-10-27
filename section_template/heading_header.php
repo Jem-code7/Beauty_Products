@@ -1,7 +1,7 @@
 <header>
       <nav class="navbar navbar-expand-lg navbar-light pink-bg ff-andada">
             <!-- Logo -->
-            <a class="navbar-brand" href="#"><img src="img/logo-removebg-preview.png" class="img-fluid"></a>
+            <a class="navbar-brand" href="./index.php"><img src="img/logo-removebg-preview.png" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,10 +9,10 @@
                   <!-- Buttons -->
                   <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="./products_gallery.php">Products </a>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -31,7 +31,7 @@
                         <button class="btn btn-outline-success m-2 pink-color fas fa-search" type="submit"></button>
                   </form>
                   <form class="flex icons">
-                        <a href="" class="fa fa-user-circle p-2 rounded-pill white-bg">
+                        <a href="./login_page.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
                               <span class="black-color ff-andada"> Login </span>
                         </a>
                         <!-- Cart Icon -->

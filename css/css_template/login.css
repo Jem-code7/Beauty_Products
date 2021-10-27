@@ -1,0 +1,41 @@
+.form .container {
+      height: 700px;
+      padding-top: 6%;
+}
+
+.form .row {
+      background: rgba(255, 255, 255, .7);
+      border-radius: 30px;
+      height: 75%;
+      box-shadow: 12px 12px 22px rgba(251, 177, 223, 0.609);
+}
+
+.form .row .welcome-img img{
+      height: 100%;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+}
+
+.form .form-row .form-control {
+      border-color: pink;
+      border-width: 2px;
+      background: rgba(255, 255, 255, .85);
+}
+
+.form .btn-login{
+      border: none;
+      outline: none;
+      height: 50px;
+      width: 100%;
+      background-color: black;
+      color: pink;
+      border-radius: 5px;
+      font-weight: bold;
+}
+
+.form .btn-login:hover{
+      background: rgb(255, 248, 254);
+      border: 2px solid;
+      color: rgb(243, 150, 207);
+}
+
