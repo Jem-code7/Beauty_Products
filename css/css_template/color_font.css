@@ -1,0 +1,39 @@
+
+.ff-andada {
+    font-family: 'Andada Pro', serif;
+}
+
+.ff-cookie {
+    font-family: 'Cookie', cursive;
+}
+
+.pink-bg {
+    background-color: rgb(255, 151, 215);
+}
+.pink-color {
+    background-color: rgb(255, 151, 215);
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.black-bg {
+    background-color:black;
+}
+
+.black-color {
+    color: black;
+}
+
+.white-color {
+    color: white;
+}
+
+.gray-color {
+    color: gray;
+}
+
+.grad-pink-cream {
+    background-image: linear-gradient(to bottom right, rgb(255, 145, 231),rgb(255, 232, 245));
+  }

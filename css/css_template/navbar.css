@@ -1,0 +1,19 @@
+.navbar .navbar-brand {
+      width: 80px;
+}
+
+.navbar .cart-logo {
+      width: 10px;
+}
+
+.navbar .icons a:hover {
+      text-decoration: none;
+}
+
+.navbar .icons .cart-logo:hover .fas {
+      filter:brightness(50%);
+}
+
+.navbar .collapse .navbar-nav{
+      max-height: 100px;
+}

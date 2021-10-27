@@ -16,10 +16,4 @@ $(document).ready(function() {
         rewind: true
     });
 
-    $(".grid").isotope({
-      itemSelector: '.grid-item',
-      layoutMode: 'fitRows'
-});
-
-    
 });

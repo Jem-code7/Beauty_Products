@@ -23,3 +23,7 @@
     
     <!-- Database - Supabase(Postgres) -->
     <?php require ('./eventhandler_DB/DBEventHandler.php') ?>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/design.css">
+</head>

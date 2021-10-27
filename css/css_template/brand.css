@@ -4,8 +4,9 @@
       height: 50px;
 }
 
-.products-area .grid .products img
+.brands-area
 {
-      width: 200px;
-      height: 200px
+      padding-left: 10%;
+      padding-right: 10%;
 }
+
