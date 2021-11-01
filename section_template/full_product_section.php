@@ -1,21 +1,45 @@
+<?php 
+      $products = $_f_product->getFromProducts();
+
+      $brand = array_map(function ($pro){return $pro['brand_name'];}, $_f_product->getFromBrands());
+      $brand_id = array_map(function ($pro){return $pro['brand_id'];}, $_f_product->getFromBrands());
+
+
+      // to use ADD Button
+      if($_SERVER['REQUEST_METHOD'] == "POST")
+      {
+            if(isset($_POST['special_prize_submit']))
+            {
+                  $cart->addToCart($_POST['item_id'], $_POST['user_id']);
+            }
+      }
+?>
+
 <section class="product">
-      <div class="container py-5">
-            <div class="filter button-group text-right ff-roboto fs-text">
-                  <button class="btn is-checked" data-filter="*">All Brand</button>
-                  <button class="btn" data-filter=".Lotion">Lotion</button>
-                  <button class="btn" data-filter=".Shampoo">Shampoo</button>
-                  <button class="btn" data-filter=".Facial-Cream">Facial Cream</button>
-                  <button class="btn" data-filter=".Lipstick">Lipstick</button>
+      <div class="container py-5 text-right">
+            <div class="filter btn-group ff-roboto fs-text">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Brands
+                  </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item is-checked btn" data-filter="*" href="#">All Brands</a>
+                        <?php 
+                              array_map(function ($brand_id, $brand){
+                                    printf('<a class="dropdown-item btn" data-filter=".%s" href="#">%s</a>', $brand_id, $brand);
+                              },$brand_id, $brand);
+                        ?>
+                  </div>
             </div>
+            
             <div class="grid">
-                  <?php for ($i=0; $i < 10; $i++) : ?>
+                  <?php array_map(function($item) /*use($in_cart)*/{ ?>
                         <a href="">
-                              <div class="grid-item frame p-2 text-center rounded Lipstick">
+                              <div class="grid-item frame p-2 text-center rounded <?php echo $item['brand_id'] ?? "1" ?>">
                                     <div class="item p-2">
                                           <div class="products">
                                                 <img src="./img/1.png" alt="" class="img-fluid rounded">
-                                                <h4>Products name</h4>
-                                                <h6>Price</h6>
+                                                <h4><?php echo $item['name'] ?></h4>
+                                                <h6><?php echo $item['price'] ?></h6>
                                                 <div class="rating text-warning fs-text pb-2">
                                                       <span><i class="fas fa-star"></i></span>
                                                       <span><i class="fas fa-star"></i></span>
@@ -30,70 +54,7 @@
                                     </div>
                               </div>
                         </a>
-                        <a href="">
-                              <div class="grid-item here frame p-2 text-center rounded Lotion">
-                                    <div class="item p-2">
-                                          <div class="products">
-                                                <img src="./img/2.png" alt="" class="img-fluid rounded">
-                                                <h4>Products name</h4>
-                                                <h6>Price</h6>
-                                                <div class="rating text-warning fs-text pb-2">
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                </div>
-                                                <form>
-                                                      <button type="submit" class="btn btn-warning">Add to Cart</button>
-                                                </form>
-                                          </div>
-                                    </div>
-                              </div>
-                        </a>
-                        <a href="">
-                              <div class="grid-item here frame p-2 text-center rounded Shampoo">
-                                    <div class="item p-2">
-                                          <div class="products">
-                                                <img src="./img/3.png" alt="" class="img-fluid rounded">
-                                                <h4>Products name</h4>
-                                                <h6>Price</h6>
-                                                <div class="rating text-warning fs-text pb-2">
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                </div>
-                                                <form>
-                                                      <button type="submit" class="btn btn-warning">Add to Cart</button>
-                                                </form>
-                                          </div>
-                                    </div>
-                              </div>
-                        </a>
-                        <a href="">
-                              <div class="grid-item here frame p-2 text-center rounded Facial-Cream">
-                                    <div class="item p-2">
-                                          <div class="products">
-                                                <img src="./img/4.png" alt="" class="img-fluid rounded">
-                                                <h4>Products name</h4>
-                                                <h6>Price</h6>
-                                                <div class="rating text-warning fs-text pb-2">
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                </div>
-                                                <form>
-                                                      <button type="submit" class="btn btn-warning">Add to Cart</button>
-                                                </form>
-                                          </div>
-                                    </div>
-                              </div>
-                        </a>
-                  <?php endfor ?>
+                  <?php },$products) ?>
             </div>
       </div>
 </section>

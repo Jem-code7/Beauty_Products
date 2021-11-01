@@ -9,21 +9,21 @@
                   <!-- Buttons -->
                   <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item active">
-                        <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="./products_gallery.php">Products </a>
+                              <a class="nav-link" href="./products_gallery.php">Products </a>
                         </li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                              More
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                              <li><a class="dropdown-item" href="#">Upcommings & Events</a></li>
-                              <li><a class="dropdown-item" href="#">News</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">About Developers</a></li>
-                        </ul>
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    More
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Upcommings & Events</a></li>
+                                    <li><a class="dropdown-item" href="#">News</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">About Developers</a></li>
+                              </ul>
                         </li>
                   </ul>
                   <form class="d-flex flex-row">

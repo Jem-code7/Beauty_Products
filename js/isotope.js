@@ -5,7 +5,7 @@ $(document).ready(function() {
             layoutMode: 'fitRows'
       });
 
-      $(".button-group").on("click", "button", function(){
+      $(".btn-group").on("click", ".btn", function(){
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({filter:filterValue});
       });
