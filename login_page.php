@@ -9,7 +9,7 @@
                   if ($userdata['password'] == $password) {
                         $_SESSION['login']= "<p class='success'>Login Successfully</p>";
                         $_SESSION['email'] = $userdata['email'];
-                        header("Location:http://localhost/PHP-codes/Others_Work/Beauty_Products/admin_user_management_page.php");
+                        header("Location:http://localhost/PHP-codes/Others_Work/Beauty_Products/admin_order_management_page.php");
                   }else{
                         $_SESSION['error'] = "<p class='error'>Wrong Password</p>";
                   }
