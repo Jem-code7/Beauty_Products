@@ -10,9 +10,9 @@ class f_product
             $this->db = $db;
       }
 
-      public function getFromProducts($table="tbl_products")
+      public function getFromProducts()
       {
-            $result = $this->db->con->query("SELECT * FROM {$table}");
+            $result = $this->db->con->query("SELECT * FROM tbl_products");
 
             $resultArray = array();
 
@@ -25,9 +25,9 @@ class f_product
 
       }
 
-      public function getFromBrands($table='tbl_brands')
+      public function getFromProductsBrands()
       {
-            $result = $this->db->con->query("SELECT * FROM {$table}");
+            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id");
 
             $resultArray = array();
 
@@ -40,4 +40,35 @@ class f_product
 
       }
 
+      public function getFromBrands()
+      {
+            $result = $this->db->con->query("SELECT * FROM tbl_brands");
+
+            $resultArray = array();
+
+            while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
+            {
+                  $resultArray[] = $item;
+            }
+
+            return $resultArray;
+
+      }
+      
+      public function getFromBrandsSorted()
+      {
+            $result = $this->db->con->query("SELECT * FROM tbl_brands ORDER BY brand_name");
+
+            $resultArray = array();
+
+            while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
+            {
+                  $resultArray[] = $item;
+            }
+
+            return $resultArray;
+
+      }
+      
+      
 }

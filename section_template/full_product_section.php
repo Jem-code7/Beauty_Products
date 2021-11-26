@@ -1,9 +1,8 @@
 <?php 
-      $products = $_f_product->getFromProducts();
+      $products = $_f_product->getFromProductsBrands();
 
-      $brand = array_map(function ($pro){return $pro['brand_name'];}, $_f_product->getFromBrands());
-      $brand_id = array_map(function ($pro){return $pro['brand_id'];}, $_f_product->getFromBrands());
-
+      $brand = array_map(function ($pro){return $pro['brand_name'];}, $_f_product->getFromBrandsSorted());
+      $brand_id = array_map(function ($pro){return $pro['brand_id'];}, $_f_product->getFromBrandsSorted());
 
       // to use ADD Button
       if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -38,7 +37,10 @@
                                     <div class="item p-2">
                                           <div class="products">
                                                 <img src="./img/1.png" alt="" class="img-fluid rounded">
-                                                <h4><?php echo $item['name'] ?></h4>
+                                                <h5><div style="box-sizing: content-box; display: block; height: 2em; word-wrap: break-word; overflow: hidden; text-overflow: ellipsis; line-height: 1.8em;">
+                                                      <?php echo $item['name'] ?>
+                                                </div></h5>
+                                                <small><?php echo $item['brand_name'] ?></small>
                                                 <h6><?php echo $item['price'] ?></h6>
                                                 <div class="rating text-warning fs-text pb-2">
                                                       <span><i class="fas fa-star"></i></span>

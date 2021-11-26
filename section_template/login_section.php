@@ -1,17 +1,3 @@
-<?php
-$login_alert='';
-
-if (isset($_POST['submit'])){
-      if($_login->checkUser($_POST['email'], $_POST['password'], $db->con)>0){
-            $login_alert='';
-      }else{
-            $login_alert="Email is not Registered or Wrong Password";
-      }
-      
-}
-
-?>
-
 <section class="form mx-5">
       <div class="container">
             <div class="row no-gutters">
@@ -39,7 +25,12 @@ if (isset($_POST['submit'])){
                                           <button type="submit" name="submit" class="btn-login">Login</button>
                                     </div>
                               </div>
-                              <small class="text-danger"><?php echo $login_alert?></small>
+                              <?php
+                                    if(isset($_SESSION['error'])){
+                                          echo $_SESSION['error'];
+                                          unset($_SESSION['error']);
+                                    }
+                              ?>
                         </form>
                         ...<a href="">Forgot Password</a>?
                   </div>

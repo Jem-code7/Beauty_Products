@@ -19,11 +19,15 @@
 }
 
 .black-bg {
-    background-color:black;
+    background-color:rgb(27, 27, 27);
+}
+
+.gray-bg {
+    background-color:rgb(59, 59, 59);
 }
 
 .black-color {
-    color: black;
+    color: rgb(27, 27, 27);
 }
 
 .white-color {

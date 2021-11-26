@@ -8,22 +8,11 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                   <!-- Buttons -->
                   <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li class="nav-item active">
-                              <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                              <a class="nav-link" href="./index.php">Coolest Beauty Products <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="./products_gallery.php">Products </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    More
-                              </a>
-                              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">Upcommings & Events</a></li>
-                                    <li><a class="dropdown-item" href="#">News</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">About Developers</a></li>
-                              </ul>
+                              <a class="nav-link" href="./products_gallery.php">  Products brochure </a>
                         </li>
                   </ul>
                   <form class="d-flex flex-row">
@@ -32,7 +21,7 @@
                   </form>
                   <form class="flex icons">
                         <a href="./login_page.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
-                              <span class="black-color ff-andada"> Login </span>
+                              <span class="black-color ff-andada"> Log In </span>
                         </a>
                         <!-- Cart Icon -->
                         <a href="" class="cart-logo p-2 rounded-pill white-bg">

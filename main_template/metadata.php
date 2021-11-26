@@ -29,4 +29,7 @@
 
     <!-- Database Connection -->
     <?php require './eventhandler_DB/DBEventHandler.php' ?>
+
+    <!-- Constant -->
+    <?php include_once './eventhandler_DB/constant.php' ?>
 </head>
