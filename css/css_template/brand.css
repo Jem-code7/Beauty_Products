@@ -4,9 +4,20 @@
       height: 50px;
 }
 
+.brands-area .owl-carousel
+{
+      margin-left: 20%;
+}
+
 .brands-area
 {
-      padding-left: 10%;
-      padding-right: 10%;
+      padding-left: 5%;
+      padding-right: 5%;
+}
+
+.brands-area .products
+{
+      margin-left: 20%;
+      margin-right: 20%;
 }
 

@@ -36,7 +36,7 @@
                               <div class="grid-item frame p-2 text-center rounded <?php echo $item['brand_id'] ?? "1" ?>">
                                     <div class="item p-2">
                                           <div class="products">
-                                                <img src="./img/1.png" alt="" class="img-fluid rounded">
+                                                <img src="./img/Placeholders/No_Image_Placeholderpng.png" alt="" class="img-fluid rounded">
                                                 <h5><div style="box-sizing: content-box; display: block; height: 2em; word-wrap: break-word; overflow: hidden; text-overflow: ellipsis; line-height: 1.8em;">
                                                       <?php echo $item['name'] ?>
                                                 </div></h5>

@@ -1,7 +1,7 @@
 <header>
       <nav class="navbar navbar-expand-lg navbar-light pink-bg ff-andada">
             <!-- Logo -->
-            <a class="navbar-brand" href="./index.php"><img src="img/logo-removebg-preview.png" class="img-fluid"></a>
+            <a class="navbar-brand" href="./index.php"><img src="./img/logo-removebg-preview.png" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
             </button>
@@ -12,7 +12,7 @@
                               <a class="nav-link" href="./index.php">Coolest Beauty Products <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="./products_gallery.php">  Products brochure </a>
+                              <a class="nav-link" href="./products_gallery.php">  Products </a>
                         </li>
                   </ul>
                   <form class="d-flex flex-row">

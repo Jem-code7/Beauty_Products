@@ -11,7 +11,7 @@ $(document).ready(function() {
     
     $(".brands-area .owl-carousel").owlCarousel({
         dots: true,
-        items: 10,
+        items: 7,
         autoplay: true,
         rewind: true
     });

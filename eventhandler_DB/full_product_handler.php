@@ -40,6 +40,21 @@ class f_product
 
       }
 
+      public function getFromProductsBrandsHighlight()
+      {
+            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id WHERE highlight=1");
+
+            $resultArray = array();
+
+            while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
+            {
+                  $resultArray[] = $item;
+            }
+
+            return $resultArray;
+
+      }
+
       public function getFromBrands()
       {
             $result = $this->db->con->query("SELECT * FROM tbl_brands");

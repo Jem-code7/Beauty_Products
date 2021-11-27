@@ -3,7 +3,7 @@
             <div class="row">
                   <div class="col-lg-3 col-12 text-white">
                   <h4>Shop Name</h4>
-                  <img src="img/logo-removebg-preview.png" class="img-fluid">
+                  <img src="./img/logo-removebg-preview.png" class="img-fluid">
                   </div>
                   <div class="col-lg-3 col-12 text-white">
                   <h4>Something</h4>

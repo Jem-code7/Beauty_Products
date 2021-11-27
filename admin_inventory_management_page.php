@@ -1,10 +1,11 @@
 <?php
       include_once "./main_template/metadata.php";
+      include_once './eventhandler_DB/login-checker.php';
 ?>
 <body>
       <?php include_once './section_template/admin_header.php'?>
 
-      <section class="main-content grad-pink-cream">
+      <section class="main-content grad-pink-cream pb-5">
             <div class="mx-5">
                   <h1><strong>Manage Inventory</strong></h1>
 
@@ -30,7 +31,7 @@
                                           while ($rows=mysqli_fetch_assoc($res)) :
                                                 ?>
                                                 <tr>
-                                                      <td><?php echo ($i)?> </td>
+                                                      <td><?php echo $i?> </td>
                                                       <td>Test</td>
                                                       <td><?php echo $rows['name']?></td>
                                                       <td>Test</td>
