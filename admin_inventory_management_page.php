@@ -9,8 +9,20 @@
             <div class="mx-5">
                   <h1><strong>Manage Inventory</strong></h1>
 
+                  <?php
+                        if(isset($_SESSION['result'])){
+                              echo $_SESSION['result'];
+                              unset($_SESSION['result']);
+                        }
+
+                        if(isset($_SESSION['profile_upload'])){
+                              echo $_SESSION['profile_upload'];
+                              unset($_SESSION['profile_upload']);
+                        }
+                  ?>
+
                   <br><br>
-                  <a href=""><button class="btn btn-warning">Add Item</button></a>
+                  <a href="./add_item.php?use=Add"><button class="btn btn-warning">Add Item</button></a>
                   <br><br><br>
                   <table style="width: 100%;">
                         <tr>
@@ -40,8 +52,8 @@
                                                       <td>Test</td>
                                                       <td>$ <?php echo $rows['price']?></td>
                                                       <td>
-                                                            <a href="" class="btn btn-secondary">Update</a>
-                                                            <a href="" class="btn btn-danger">Delete</a>
+                                                            <a href="<?php if ($rows['item_id'] != 1) echo './add_item.php?use=Update&id='.$rows['item_id']?>" class="btn btn-secondary">Update</a>
+                                                            <a href="<?php if ($rows['item_id'] != 1) echo ''?>" class="btn btn-danger">Delete</a>
                                                       </td>
                                                 </tr>
                                                 <?php

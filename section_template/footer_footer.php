@@ -2,8 +2,8 @@
       <div class="container-fluid w-75">
             <div class="row">
                   <div class="col-lg-3 col-12 text-white">
-                  <h4>Shop Name</h4>
-                  <img src="./img/logo-removebg-preview.png" class="img-fluid">
+                  <h4>Coolest Beauty Products</h4>
+                  <img src="./img/logo-removebg-preview.png" class="img-fluid px-auto">
                   </div>
                   <div class="col-lg-3 col-12 text-white">
                   <h4>Something</h4>

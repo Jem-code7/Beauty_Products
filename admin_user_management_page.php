@@ -9,8 +9,20 @@
             <div class="mx-5">
                   <h1><strong>Manage User</strong></h1>
 
+                  <?php
+                        if(isset($_SESSION['result'])){
+                              echo $_SESSION['result'];
+                              unset($_SESSION['result']);
+                        }
+
+                        if(isset($_SESSION['profile_upload'])){
+                              echo $_SESSION['profile_upload'];
+                              unset($_SESSION['profile_upload']);
+                        }
+                  ?>
+
                   <br><br>
-                  <a href=""><button class="btn btn-warning">Add User</button></a>
+                  <a href="./add_user.php?use=Add"><button class="btn btn-warning">Add User</button></a>
                   <br><br><br>
                   <table style="width: 100%;">
                         <tr>
@@ -40,7 +52,7 @@
                                                       <td><?php echo $rows['phone_number']?></td>
                                                       <td>Test</td>
                                                       <td>
-                                                            <a href="" class="btn btn-secondary">Update</a>
+                                                            <a href="./add_user.php?use=Update&id=<?php echo $rows['user_id']?>" class="btn btn-secondary">Update</a>
                                                             <a href="" class="btn btn-danger">Delete</a>
                                                       </td>
                                                 </tr>

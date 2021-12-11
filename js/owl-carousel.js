@@ -9,11 +9,21 @@ $(document).ready(function() {
         mouseDrag: false
     });
     
-    $(".brands-area .owl-carousel").owlCarousel({
-        dots: true,
-        items: 7,
-        autoplay: true,
-        rewind: true
+    $('.brands-area .owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:7
+            },
+            1000:{
+                items:8
+            }
+        }
     });
 
 });
