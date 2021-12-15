@@ -28,7 +28,7 @@
                         <button class="btn btn-outline-success m-2 fas fa-search" type="submit"></button>
                   </form>
                   <form class="flex icons mr-5">
-                        <a href="./login_page.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
+                        <a href="./logout.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
                               <span class="black-color ff-andada"> Log Out </span>
                         </a>
                         <a href="./login_page.php" class="p-2 rounded-pill white-bg">

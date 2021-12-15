@@ -21,7 +21,8 @@
                   </form>
                   <form class="flex icons">
                         <a href="./login_page.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
-                              <span class="black-color ff-andada"> Log In </span>
+                              <?php  ?>
+                              <span class="black-color ff-andada"> <?php echo (isset($_SESSION['user']))? $_SESSION['user'] : 'Log In' ?></span>
                         </a>
                         <!-- Cart Icon -->
                         <a href="" class="cart-logo p-2 rounded-pill white-bg">

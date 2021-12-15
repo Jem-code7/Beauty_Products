@@ -32,7 +32,7 @@
             
             <div class="grid">
                   <?php array_map(function($item) /*use($in_cart)*/{ ?>
-                        <a href="">
+                        <a href="./product.php?id=<?php echo $item['item_id']?>">
                               <div class="grid-item frame p-2 text-center rounded <?php echo $item['brand_id'] ?? "1" ?>">
                                     <div class="item p-2">
                                           <div class="products">
@@ -42,13 +42,6 @@
                                                 </div></h5>
                                                 <small><?php echo $item['brand_name'] ?></small>
                                                 <h6><?php echo $item['price'] ?></h6>
-                                                <div class="rating text-warning fs-text pb-2">
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                      <span><i class="fas fa-star"></i></span>
-                                                </div>
                                                 <form>
                                                       <button type="submit" class="btn btn-warning">Add to Cart</button>
                                                 </form>

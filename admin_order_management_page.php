@@ -1,6 +1,6 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-checker.php';
+      include_once './eventhandler_DB/login-admin-checker.php';
 ?>
 <body>
       <?php include_once './section_template/admin_header.php'?>

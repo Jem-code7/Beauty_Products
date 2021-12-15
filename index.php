@@ -10,10 +10,10 @@
 
         <?php include './section_template/most_buy_section.php'?>
 
-        <?php include './section_template/footer_footer.php' ?>
+        <?php include './section_template/footer_footer.php'?>
     </main>
 
-    <?php include_once './main_template/script.php'; ?>
+    <?php include_once './main_template/script.php'?>
     
 </body>
 </html>

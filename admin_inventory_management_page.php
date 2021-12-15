@@ -1,6 +1,6 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-checker.php';
+      include_once './eventhandler_DB/login-admin-checker.php';
 ?>
 <body>
       <?php include_once './section_template/admin_header.php'?>
@@ -30,30 +30,36 @@
                               <th>Code</th>
                               <th>Product Name</th>
                               <th>Image</th>
-                              <th>Stock Location</th>
+                              <th>Description</th>
+                              <th>Category</th>
+                              <th>Brand</th>
+                              <th>Highlight</th>
                               <th>Quantity Stock</th>
                               <th>Sale</th>
                               <th>Unit Price</th>
                               <th>Actions</th>
                         </tr>
                         <?php                             
-                              if ($res=mysqli_query($db->con, "SELECT * FROM tbl_products")) :
+                              if ($res=mysqli_query($db->con, "SELECT tbl_products.*, tbl_brands.brand_name, tbl_categories.category_name FROM ((tbl_products INNER JOIN tbl_brands ON tbl_brands.brand_id=tbl_products.brand_id) INNER JOIN tbl_categories ON tbl_categories.category_id=tbl_products.category_id)")) :
                                     if (mysqli_num_rows($res)>0) {
                                           $i = 1;
                                           while ($rows=mysqli_fetch_assoc($res)) :
                                                 ?>
                                                 <tr>
                                                       <td><?php echo $i?> </td>
-                                                      <td>Test</td>
+                                                      <td><?php echo $rows['code']?></td>
                                                       <td><?php echo $rows['name']?></td>
-                                                      <td>Test</td>
-                                                      <td>Test</td>
+                                                      <td><img src="./img/Profiles/<?php echo $rows['image']?>" alt="" style="width:50px; height:50px"></td>
+                                                      <td><?php echo $rows['description']?></td>
+                                                      <td><?php echo $rows['category_name']?></td>
+                                                      <td><?php echo $rows['brand_name']?></td>
+                                                      <td><?php echo $rows['highlight']?></td>
                                                       <td><?php echo $rows['stock']?></td>
-                                                      <td>Test</td>
+                                                      <td><?php echo $rows['sale']?></td>
                                                       <td>$ <?php echo $rows['price']?></td>
                                                       <td>
                                                             <a href="<?php if ($rows['item_id'] != 1) echo './add_item.php?use=Update&id='.$rows['item_id']?>" class="btn btn-secondary">Update</a>
-                                                            <a href="<?php if ($rows['item_id'] != 1) echo ''?>" class="btn btn-danger">Delete</a>
+                                                            <a href="<?php if ($rows['item_id'] != 1) echo './delete_function.php?id_db=item_id&id='.$rows['item_id'].'&table=tbl_products&url=admin_inventory_management_page.php'?>" class="btn btn-danger">Delete</a>
                                                       </td>
                                                 </tr>
                                                 <?php
