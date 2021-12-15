@@ -1,6 +1,6 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-checker.php';
+      include_once './eventhandler_DB/login-admin-checker.php';
 
       $use = (isset($_GET['use']))? $_GET['use']:"";
 
@@ -8,9 +8,11 @@
             $id = $_GET['id'];
 
             $name = $_POST['item_name'];
+            $code = $_POST['code'];
             $description = $_POST['description'];
             $stock = $_POST['stock'];
             $price = $_POST['price'];
+            $sale = $_POST['sale'];
             $highlight = $_POST['highlight'];
             $brand_id = $_POST['brand'];
             $category_id = $_POST['category'];
@@ -33,7 +35,7 @@
             }
             
             $sql = (($use == "Add")? "INSERT INTO" : "UPDATE")
-                  ." tbl_products SET name='$name', description='$description', stock='$stock', price='$price', category_id='$category_id', brand_id='$brand_id', highlight='$highlight'"
+                  ." tbl_products SET name='$name', description='$description', stock='$stock', price='$price', category_id='$category_id', brand_id='$brand_id', highlight='$highlight', sale='$sale', code='$code'"
                   .(($image_upload)? ", image='$image_name'" : "")
                   .(($use == "Add")? "": "WHERE item_id='$id'");
 
@@ -67,14 +69,18 @@
                                           <td><img src="<?php echo ($rows['image'] != "")? 
                                                 './img/Profiles/'.$rows['image']:
                                                 './img/Placeholders/No_Image_Placeholderpng.png';?>" 
-                                                alt="" style="width: 200px; height: 200px"></td>
+                                                alt="" style="width: 200px; height: 200px" id='image'></td>
                                           <td class="align-bottom">
                                                 <h5>Image: </h5>
-                                                <input type="file" name="product_img">
+                                                <input type="file" name="product_img" onchange="readURL(this);" accept=".png, .jpg">
                                           </td>
                                     </tr>
                                     <tr>
-                                          <td style="width: 10%"><h5>Products Name:</h5></td>
+                                          <td style="width: 10%"><h5>Product Code:</h5></td>
+                                          <td><input style="width: 100%" type="text" name="code" placeholder="Product Code" value="<?php if($use=="Update") echo $rows['code']?>" required></td>
+                                    </tr>
+                                    <tr>
+                                          <td style="width: 10%"><h5>Product Name:</h5></td>
                                           <td><input style="width: 100%" type="text" name="item_name" placeholder="Product Name" value="<?php if($use=="Update") echo $rows['name']?>" required></td>
                                     </tr>
                                     <tr>
@@ -133,6 +139,10 @@
                                           <td><input style="width: 100%" type="number" name="stock" placeholder="Stock" value="<?php if($use=="Update") echo $rows['stock']?>" required></td>
                                     </tr>
                                     <tr>
+                                          <td style="width: 10%"><h5>Sale:</h5></td>
+                                          <td><input style="width: 100%" type="number" name="sale" placeholder="Sale" value="<?php if($use=="Update") echo $rows['sale']?>" required></td>
+                                    </tr>
+                                    <tr>
                                           <td style="width: 10%"><h5>Price:</h5></td>
                                           <td><input style="width: 100%" type="number" name="price" placeholder="Price" value="<?php if($use=="Update") echo $rows['price']?>" required></td>
                                     </tr>
@@ -154,6 +164,7 @@
       </main>
 
       <?php include_once './main_template/script.php'; ?>
+      <script src="./js/image_upload.js"></script>
     
 </body>
 </html>

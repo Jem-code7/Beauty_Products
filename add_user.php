@@ -1,24 +1,21 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-checker.php';
+      include_once './eventhandler_DB/login-admin-checker.php';
 
       $use = (isset($_GET['use']))? $_GET['use']:"";
 
       if (isset($_POST['submit'])){
             $username = ucfirst($_POST['username']);
+            $first_name = ucfirst($_POST['first_name']);
+            $last_name = ucfirst($_POST['last_name']);
+            $gender = $_POST['gender'];
+            $birth_date = $_POST['birth_date'];
             $address = $_POST['address'];
             $number = $_POST['number'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
-            
-            // not registered
-            $gender = $_POST['gender'];
-            $date = $_POST['date'];
-            $age = $_POST['age'];
-
-            // not used
-            $last_name = "none";
-            $email = "none";
-            $first_name = "none";
+            $type = $_POST['type'];
+            $id =  $_GET['id'];
 
             /*
             $image_name = $_FILES['profile_image']['name'];
@@ -40,14 +37,14 @@
             */
             
             $sql = (($use == "Add")? "INSERT INTO" : "UPDATE")
-                  ." tbl_user SET username='$username', password='$password', address='$address', phone_number='$number', last_name='$last_name', first_name='$first_name', email='$email'"
+                  ." tbl_user SET last_name='$last_name', first_name='$first_name', username='$username', gender='$gender', birth_date='$birth_date', password='$password', address='$address', phone_number='$number', email='$email', type='$type' "
                   //.(($image_upload)? ", image_name='$image_name'" : "")
-                  .(($use == "Add")? "": "WHERE id='$id'");
+                  .(($use == "Add")? "": "WHERE user_id='$id'");
 
             $_SESSION['result']=(mysqli_query($db->con, $sql))? 
                   "<div class='success'>User ".$use." Successfully</div>":
                   "<div class='error'>Fail to ".$use." User</div>";
-            header("location:".$homeurl.'admin_user_management_page.php');
+            header("location:".$homeurl.'admin_user_management_page.php?'.$sql);
       }
 
 ?>
@@ -81,32 +78,48 @@
                                           </td>
                                     </tr> -->
                                     <tr>
-                                          <td style="width: 10%"><h5>Name:</h5></td>
+                                          <td style="width: 10%"><h5>Username:</h5></td>
                                           <td><input style="width: 100%" type="text" name="username" placeholder="ex. Dela Cruz, Juan" value="<?php if($use=="Update") echo $rows['username']?>" required></td>
+                                    </tr>
+                                    <tr>
+                                          <td style="width: 10%"><h5>Last Name:</h5></td>
+                                          <td><input style="width: 100%" type="text" name="last_name" placeholder="ex. Dela Cruz, Juan" value="<?php if($use=="Update") echo $rows['last_name']?>" required></td>
+                                    </tr>
+                                    <tr>
+                                          <td style="width: 10%"><h5>First Name:</h5></td>
+                                          <td><input style="width: 100%" type="text" name="first_name" placeholder="ex. Dela Cruz, Juan" value="<?php if($use=="Update") echo $rows['first_name']?>" required></td>
                                     </tr>
                                     <tr>
                                           <td><h5>Gender:</h5></td>
                                           <td>
                                                 <!-- set echo checked -->
-                                                <input type="radio" name="gender" value=1 required>Male
-                                                <input class="ml-5" type="radio" name="gender" value=0>Female
+                                                <input type="radio" name="gender" value=1 <?php if($use=='Update')if($rows['gender']) echo 'checked'?> required>Male
+                                                <input class="ml-5" type="radio" name="gender" value=0 <?php if($use=='Update')if(!$rows['gender']) echo 'checked'?>>Female
                                           </td>
                                     </tr>
                                     <tr>
-                                          <td><h5>Age:</h5></td>
-                                          <td><input style="width: 100%" type="text" name="age" placeholder="ex. 300+ (no same value in database)" value=""></td>
+                                          <td><h5>Birth Date:</h5></td>
+                                          <td><input style="width: 100%" type="date" name="birth_date" value="<?php if($use=="Update") echo $rows['birth_date']?>"></td>
                                     </tr>
                                     <tr>
                                           <td><h5>Address:</h5></td>
                                           <td><input style="width: 100%" type="text" name="address" placeholder="ex. ABC" value="<?php if($use=="Update") echo $rows['address']?>" required></td>
                                     </tr>
                                     <tr>
+                                          <td><h5>Email:</h5></td>
+                                          <td><input style="width: 100%" type="email" name="email" placeholder="ex. ABC" value="<?php if($use=="Update") echo $rows['email']?>" required></td>
+                                    </tr>
+                                    <tr>
                                           <td><h5>Number:</h5></td>
                                           <td><input style="width: 100%" type="text" name="number" placeholder="ex. 09xxxxxxxx" value="<?php if($use=="Update") echo $rows['phone_number']?>" required></td>
                                     </tr>
                                     <tr>
-                                          <td><h5>Date:</h5></td>
-                                          <td><input style="width: 100%" type="text" name="date" placeholder="ex. 2003 (no same value in database)" value=""></td>
+                                          <td><h5>Type:</h5></td>
+                                          <td>
+                                                <!-- set echo checked -->
+                                                <input type="radio" name="type" value=1 <?php if($use=='Update')if($rows['type']) echo 'checked'?> required>Distributor
+                                                <input class="ml-5" type="radio" name="type" value=0 <?php if($use=='Update')if(!$rows['type']) echo 'checked'?>>Re-Seller
+                                          </td>
                                     </tr>
                                     <br>
                                     <tr>

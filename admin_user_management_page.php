@@ -27,6 +27,7 @@
                   <table style="width: 100%;">
                         <tr>
                               <th>S.N.</th>
+                              <th>Type</th>
                               <th>Username</th>
                               <th>Name</th>
                               <th>Gender</th>
@@ -45,6 +46,7 @@
                                                 ?>
                                                 <tr>
                                                       <td><?php echo $i?> </td>
+                                                      <td><?php echo ($rows['type'])? "Distributor" : "Re-Seller"?></td>
                                                       <td><?php echo $rows['username']?></td>
                                                       <td><?php echo $rows['first_name']." ".$rows['last_name']?></td>
                                                       <td><?php echo ($rows['gender'])? "Male" : "Female"?></td>
