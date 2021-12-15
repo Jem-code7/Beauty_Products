@@ -24,6 +24,7 @@
                         }
                         else {
                               $_SESSION['user'] = $userdata['username'];
+                              $_SESSION['user_id'] = $userdata['user_id'];
                               $_SESSION['user_type'] = $userdata['type'];
                               header("Location:".$homeurl);
                         }

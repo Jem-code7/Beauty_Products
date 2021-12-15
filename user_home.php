@@ -1,7 +1,12 @@
 <?php include_once './main_template/metadata.php' ?>
 
 <body>
-    <?php include './section_template/heading_header.php' ?>
+    <?php include './section_template/heading_header.php';
+        $id=$_SESSION['user_id'];
+        $i = 'user_id';
+        $rows = mysqli_fetch_assoc(mysqli_query($db->con,"SELECT * FROM tbl_user WHERE $i='$id'"));
+        './section_template/heading_header.php' 
+    ?>
 
     <section class="main-content grad-pink-cream pb-5">
 
@@ -11,7 +16,7 @@
                     <img src="" alt="" style="width: 150px; height: 150px" class="p-2 m-4 rounded-circle shadow">
 
                     <div class="row justify-content-center mb-3">
-                        <h3 class="">User name</h3>
+                        <h3 class=""><?php echo $_SESSION['user']?></h3>
                     </div>
                     <div class="row justify-content-center mt-3">
                         <a href="" class="rounded-pill border text-center btn btn-primary w-50">My Account</a>
@@ -40,7 +45,7 @@
                         </div>
                         <br>
                         <div class="row">
-                            <h3>Username</h3>
+                            <h3><?php echo $_SESSION['user']?></h3>
                         </div>
                         <br>
                         <div class="row">
@@ -48,7 +53,7 @@
                                 <h5>Name: </h5>
                             </div>
                             <div class="col">
-                                <p class="border border-dark p-3 w-100"></p>
+                                <p class="border border-dark p-3 w-100"><?php echo $rows['first_name'].' '.$rows['last_name']?></p>
                             </div>
                         </div>
                         <br>
@@ -57,7 +62,7 @@
                                 <h5>Phone Number: </h5>
                             </div>
                             <div class="col">
-                                <p class="border border-dark p-3 w-100"></p>
+                                <p class="border border-dark p-3 w-100"><?php echo $rows['phone_number']?></p>
                             </div>
                         </div>
                         <br><br>
@@ -66,13 +71,13 @@
                                 <h5>Gender: </h5>
                             </div>
                             <div class="col-lg-3">
-                                <p>Gender</p>
+                                <p><?php echo ($rows['gender'])? "Male" : "Female"?></p>
                             </div>
                             <div class="col-lg-3">
                                 <h5>Birthdate: </h5>
                             </div>
                             <div class="col-lg-3">
-                                <p>Birthdate</p>
+                                <p><?php echo $rows['birth_date']?></p>
                             </div>
                         </div>
                     </div>
