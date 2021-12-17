@@ -121,6 +121,10 @@
                                                 <input class="ml-5" type="radio" name="type" value=0 <?php if($use=='Update')if(!$rows['type']) echo 'checked'?>>Re-Seller
                                           </td>
                                     </tr>
+                                    <tr>
+                                          <td><h5>Password:</h5></td>
+                                          <td><input style="width: 100%" type="text" name="password" placeholder="" value="<?php if($use=="Update") echo $rows['password']?>" required></td>
+                                    </tr>
                                     <br>
                                     <tr>
                                           <td></td>

@@ -9,9 +9,9 @@
 
     <section class="main-content grad-pink-cream pb-5">
 
-      <div class="container-fluid justify-content-center">
+      <div class="container justify-content-center">
             <div class="row px-5 mx-5 py-3">
-                  <div class="col-lg-3 mr-3 text-center border shadow">
+                  <div class="col-lg-5 mr-3 text-center border shadow">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -24,11 +24,11 @@
                                           <img src="https://cdn.vox-cdn.com/thumbor/IxmdZHawkrs3mEJgvqQSFXMKRWo=/0x0:1215x717/1200x800/filters:focal(739x213:933x407)/cdn.vox-cdn.com/uploads/chorus_image/image/69985281/Teemo_0.0.jpg" class="d-block w-100" alt="..." style="height:500px">
                                     </div>
                               </div>
-                              <button class="carousel-control-prev my-auto" style="height:50px" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                              <button class="carousel-control-prev my-auto rounded" style="height:50px" type="button" data-target="#carouselExampleControls" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                               </button>
-                              <button class="carousel-control-next my-auto" style="height:50px" type="button" data-target="#carouselExampleControls" data-slide="next">
+                              <button class="carousel-control-next my-auto rounded" style="height:50px" type="button" data-target="#carouselExampleControls" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                               </button>
@@ -36,12 +36,15 @@
                   </div>
 
                   <div class="col border rounded shadow-lg">
-                        <div class="container m-4">
+                        <div class="container">
                               <div class="row">
                                     <h3><strong><?php echo $rows['name']?></strong></h3>
                               </div>
                               <div class="row w-100">
                                     <h5><?php echo $rows['brand_name']?></h5>
+                              </div>
+                              <div class="row w-100">
+                                    <h5><?php echo $rows['category_name']?></h5>
                               </div>
                               <div class="row w-100">
                                     <h5><?php echo $rows['category_name']?></h5>
