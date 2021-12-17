@@ -1,6 +1,6 @@
 <section class="banner grad-pink-cream">
       <div class="p-4">
-            <a href="" class="float-left"><img src="./img/logo-removebg-preview.png" alt="" style="width:8em"></a>
+            <a href="./index.php" class="float-left"><img src="./img/logo-removebg-preview.png" alt="" style="width:8em"></a>
             <h1 class="text-center" style="padding-top:1em; padding-bottom:1em;">Coolest Beauty Products</h1>
       </div>
 </section>
@@ -20,9 +20,16 @@
                               <a class="nav-link" href="./admin_user_management_page.php">Manage Users <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="./admin_inventory_management_page.php">Manage Inventory <span class="sr-only"></span></a>
+                              <a class="nav-link" href="./admin_inventory_management_page.php?times=0&active=1">Manage Inventory <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="./admin_categories_management_page.php">Manage Categories <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="./admin_brands_management_page.php">Manage Brands <span class="sr-only"></span></a>
                         </li>
                   </ul>
+
                   <form class="d-flex flex-row">
                         <input class="form-control mr-1 mt-1" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success m-2 fas fa-search" type="submit"></button>

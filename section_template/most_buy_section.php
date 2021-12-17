@@ -3,7 +3,7 @@
             <h3>Most Buy</h3>
             <div class="grid">
                   <?php array_map(function($item) /*use($in_cart)*/{ ?>
-                        <a href="">
+                        <a href="./product.php?id=<?php echo $item['item_id']?>">
                               <div class="grid-item frame p-2 text-center rounded">
                                     <div class="item p-2">
                                           <div class="products">

@@ -13,7 +13,7 @@
             $address = $_POST['address'];
             $number = $_POST['number'];
             $email = $_POST['email'];
-            $password = $_POST['password'];
+            $password = $_POST['password'];           // soon to be transfered to hash code
             $type = $_POST['type'];
             $id =  $_GET['id'];
 

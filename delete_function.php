@@ -14,6 +14,7 @@
       $return_url = $_GET['url'];
 
       $sql="DELETE FROM $table WHERE $id_db='$id'";
+      //$sql="UPDATE $table SET active=0 WHERE $id_db='$id'";
 
       $_SESSION['result']=(mysqli_query($db->con, $sql))?
             "<div class='success'>Item Delete Successfully</div>":
