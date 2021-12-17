@@ -131,7 +131,7 @@
                                     <tr>
                                           <td><h5>Description:</h5></td>
                                           <td>
-                                                <textarea name="description" id="" cols="30" rows="5" placeholder="Description." ><?php if($use=="Update") echo $rows['description']?></textarea>
+                                                <input style="width: 100%;" type="text" name="description" placeholder="Product Name" value="<?php if($use=="Update") echo $rows['description']?>" required>
                                           </td>
                                     </tr>
                                     <tr>

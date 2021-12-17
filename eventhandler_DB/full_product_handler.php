@@ -27,7 +27,7 @@ class f_product
 
       public function getFromProductsBrands()
       {
-            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id");
+            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id ORDER BY tbl_products.name");
 
             $resultArray = array();
 
@@ -42,7 +42,7 @@ class f_product
 
       public function getFromProductsBrandsHighlight()
       {
-            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id WHERE highlight=1");
+            $result = $this->db->con->query("SELECT tbl_products.*, tbl_brands.brand_name FROM tbl_products INNER JOIN tbl_brands ON tbl_products.brand_id=tbl_brands.brand_id WHERE highlight=1 ORDER BY tbl_products.name");
 
             $resultArray = array();
 

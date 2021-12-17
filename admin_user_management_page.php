@@ -39,7 +39,7 @@
                               <th>Actions</th>
                         </tr>
                         <?php                             
-                              if ($res=mysqli_query($db->con, "SELECT * FROM tbl_user")) :
+                              if ($res=mysqli_query($db->con, "SELECT * FROM tbl_user ORDER BY username")) :
                                     if (mysqli_num_rows($res)>0) {
                                           $i = 1;
                                           while ($rows=mysqli_fetch_assoc($res)) :
