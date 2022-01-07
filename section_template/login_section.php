@@ -1,4 +1,4 @@
-<section class="form mx-5">
+<section class="form mx-5" style="min-height:100vh">
       <div class="container">
             <div class="row no-gutters">
                   <div class="welcome-img col-lg-5">
@@ -7,7 +7,7 @@
                   <div class="col-lg-7 px-5 pt-2">
                         <h1>Coolest Beauty Products </h1>
                         <h4>Login your Account</h4>
-                        <form method="post">
+                        <form action="./php_modals/login_modal.php" method="post">
                               <div class="form-row">
                                     <div class="col-lg-7">
                                           <h7>Email:</h7>

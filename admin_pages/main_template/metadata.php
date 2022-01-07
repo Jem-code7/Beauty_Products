@@ -22,11 +22,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Cookie&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/design.css">
+    <link rel="stylesheet" href="./../css/design.css">
 
     <!-- Database Connection -->
-    <?php require './DBEventHandler.php' ?>
+    <?php require './../DBEventHandler.php' ?>
 
     <!-- Constant -->
-    <?php include_once './eventhandler_DB/constant.php' ?>
+    <?php include_once './../eventhandler_DB/constant.php' ?>
 </head>

@@ -1,4 +1,6 @@
-<?php include_once './main_template/metadata.php' ?>
+<?php 
+    include_once './main_template/metadata.php';
+?>
 
 <body>
     <?php include './section_template/heading_header.php' ?>

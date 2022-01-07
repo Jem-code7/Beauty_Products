@@ -1,9 +1,9 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-admin-checker.php';
+      include_once '../eventhandler_DB/login-admin-checker.php';
 ?>
 <body>
-      <?php include_once './section_template/admin_header.php'?>
+      <?php include_once '../section_template/admin_header.php'?>
 
       <section class="main-content grad-pink-cream pb-5">
             <div class="mx-5">
@@ -30,12 +30,12 @@
                   <a href="./add_item.php?use=Add"><button class="btn btn-warning">Add Item</button></a>
                   
                   <div class="float-right">
-                        <?php if($_GET['times'] >= 1) echo '<a href="./admin_inventory_management_page.php?times='.(($_GET['times'] >= 1)? (int)$_GET['times']-1 : "").'"><button class="btn btn-warning">Prev</button></a>'?>
+                        <?php if($_GET['times'] >= 1) echo '<a href="./admin_inventory_management_page.php?times='.((int)$_GET['times']-1).'&active='.$_GET['active'].'"><button class="btn btn-warning">Prev</button></a>'?>
                         &emsp;
-                        <a href="./admin_inventory_management_page.php?times=<?php echo (int)$_GET['times']+1?>"><button class="btn btn-warning">Next</button></a>
+                        <a href="./admin_inventory_management_page.php?times=<?php echo (int)$_GET['times']+1?>&active=<?php echo $_GET['active']?>"><button class="btn btn-warning">Next</button></a>
                   </div>
                   <br><br><br>
-                  <table style="width: 100%;">
+                  <table style="width: 100%; height: 100vh">
                         <tr>
                               <th>S.N.</th>
                               <th>Code</th>
@@ -59,10 +59,10 @@
                                           while ($rows=mysqli_fetch_assoc($res)) :
                                                 ?>
                                                 <tr class="border">
-                                                      <td><?php echo $i?> </td>
+                                                      <td>-    <?php echo $i?> </td>
                                                       <td><?php echo $rows['code']?></td>
                                                       <td><?php echo $rows['name']?></td>
-                                                      <td><img src="<?php echo (isset($rows['image']))? "./img/Profiles/".$rows['image'] : "./img/Placeholders/No_Image_Placeholderpng.png"?>" alt="" style="width:50px; height:50px"></td>
+                                                      <td><img src="<?php echo (isset($rows['image']))? "./../img/Profiles/".$rows['image'] : "./img/Placeholders/No_Image_Placeholderpng.png"?>" alt="" style="width:50px; height:50px"></td>
                                                       <td style="display: block; height: 100px; overflow-y: auto"><?php
                                                             $pieces = explode(" ", $rows['description']);
                                                             $first_part = implode(" ", array_splice($pieces, 0, 1));
@@ -98,7 +98,7 @@
             </div>
       </section>
 
-      <?php include './section_template/footer_footer.php' ?>
+      <?php include './main_template/footer_footer.php' ?>
 
       <?php include_once './main_template/script.php'; ?>
 </body>

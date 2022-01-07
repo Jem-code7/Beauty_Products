@@ -8,7 +8,7 @@
         './section_template/heading_header.php' 
     ?>
 
-    <section class="main-content grad-pink-cream pb-5">
+    <section class="main-content grad-pink-cream pb-5" style="min-height:100vh">
 
         <div class="container-fluid justify-content-center">
             <div class="row px-5 mx-5 py-3">
@@ -16,11 +16,8 @@
 
                 <div class="col border rounded shadow-lg">
                     <div class="container m-4">
-                        <div class="row">
-                            <h3><strong>Cart</strong></h3>
-                        </div>
                         <div class="row pl-3 border-bottom border-dark w-50">
-                            <h5>Manage Your Cart</h5>
+                            <h3 ><strong>Notifications</strong></h3>
                         </div>
                     </div>
                 </div>

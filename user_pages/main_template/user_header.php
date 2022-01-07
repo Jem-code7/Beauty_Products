@@ -1,7 +1,7 @@
 <header>
       <nav class="navbar navbar-expand-lg navbar-light pink-bg ff-andada">
             <!-- Logo -->
-            <a class="navbar-brand" href="./index.php"><img src="./img/logo-removebg-preview.png" class="img-fluid"></a>
+            <a class="navbar-brand" href="../index.php"><img src="../img/logo-removebg-preview.png" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,10 +9,10 @@
                   <!-- Buttons -->
                   <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                              <a class="nav-link" href="./index.php">Coolest Beauty Products <span class="sr-only"></span></a>
+                              <a class="nav-link" href="../index.php">Coolest Beauty Products <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="./products_gallery.php">  Products </a>
+                              <a class="nav-link" href="../products_gallery.php">  Products </a>
                         </li>
                   </ul>
                   <form class="d-flex flex-row">
@@ -25,7 +25,7 @@
                               <span class="black-color ff-andada"> <?php echo (isset($_SESSION['user']))? $_SESSION['user'] : 'Log In' ?></span>
                         </a>
                         <!-- Cart Icon -->
-                        <a href="<?php echo "./user_pages/user_cart.php"?>" class="cart-logo p-2 rounded-pill white-bg">
+                        <a href="" class="cart-logo p-2 rounded-pill white-bg">
                               <span class="fs-heading2 px-2 gray-color"><i class="fas fa-shopping-cart"></i></span>
                               <span class="px-2 py-2 rounded-pill black-color white-bg">0</span>
                         </a>

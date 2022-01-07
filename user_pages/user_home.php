@@ -1,18 +1,18 @@
-<?php include_once './main_template/metadata.php' ?>
+<?php include_once './main_template/user_metadata.php' ?>
 
-<body>
-    <?php include './section_template/heading_header.php';
+<body class="grad-pink-cream d-flex flex-column min-vh-100" style="height:80vh">
+    <?php include './main_template/user_header.php';
         $id=$_SESSION['user_id'];
         $i = 'user_id';
         $rows = mysqli_fetch_assoc(mysqli_query($db->con,"SELECT * FROM tbl_user WHERE $i='$id'"));
         './section_template/heading_header.php' 
     ?>
 
-    <section class="main-content grad-pink-cream pb-5">
+    <section class="main-content pb-5" style="min-height:100vh">
 
         <div class="container-fluid justify-content-center">
             <div class="row px-5 mx-5 py-3">
-                <?php include './section_template/side_panel_user_account.php' ?>
+                <?php include '../section_template/side_panel_user_account.php' ?>
 
                 <div class="col border rounded shadow-lg">
                     <div class="container m-4">
@@ -53,10 +53,14 @@
                                 <p><?php echo ($rows['gender'])? "Male" : "Female"?></p>
                             </div>
                             <div class="col-lg-3">
-                                <h5>Birthdate: </h5>
+                                <h5>Age: </h5>
                             </div>
                             <div class="col-lg-3">
-                                <p><?php echo $rows['birth_date']?></p>
+                                <p><?php 
+                                    $date = date_format(date_create($rows['birth_date']), 'm/d/Y');
+                                    $birthDate = explode('/', $date);
+                                    echo (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")? ((date("Y") - $birthDate[2]) - 1) : (date("Y") - $birthDate[2])); 
+                                ?></p>
                             </div>
                         </div>
                     </div>
@@ -66,9 +70,9 @@
 
     </section>
 
-    <?php include './section_template/footer_footer.php' ?>
+    <?php include './main_template/user_footer.php' ?>
 
-    <?php include_once './main_template/script.php'; ?>
+    <?php include_once './main_template/user_script.php'; ?>
     
 </body>
 </html> 

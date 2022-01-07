@@ -1,11 +1,11 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-admin-checker.php';
+      include_once '../eventhandler_DB/login-admin-checker.php';
 ?>
 <body>
-      <?php include_once './section_template/admin_header.php'?>
+      <?php include_once '../section_template/admin_header.php'?>
 
-      <section class="main-content grad-pink-cream pb-5">
+      <section class="main-content grad-pink-cream pb-5" style="padding-bottom: 10%;">
             <div class="mx-5">
                   <h1><strong>Manage User</strong></h1>
 
@@ -24,7 +24,7 @@
                   <br><br>
                   <a href="./add_user.php?use=Add"><button class="btn btn-warning">Add User</button></a>
                   <br><br><br>
-                  <table style="width: 100%;">
+                  <table style="width: 100%; height: 50vh">
                         <tr>
                               <th>S.N.</th>
                               <th>Type</th>
@@ -68,14 +68,14 @@
                                                 $i++;
                                           endwhile;
                                     }
-                                    else { echo "<tr><td colspan='9'><div class='text-center text-danger'>No Available Item</div></td></tr>";}
+                                    else { echo "<tr><td colspan='9'><div class='text-center text-danger' style='height: 50vh>No Available Item</div></td></tr>";}
                               endif;
                         ?>
                   </table>
             </div>
       </section>
 
-      <?php include './section_template/footer_footer.php' ?>
+      <?php include './main_template/footer_footer.php' ?>
 
       <?php include_once './main_template/script.php'; ?>
 </body>

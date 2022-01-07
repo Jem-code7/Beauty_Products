@@ -9,7 +9,12 @@
                         ?>
                               <div class="item">
                                     <div class="products text-center">
-                                          <a href=""><img src="./img/Placeholders/Logo_Placeholder.png" alt="product" class="rounded mx-auto d-block"></a>
+                                          <a href=""><img src="<?php
+                                                      echo ($item['brand_logo'] == "")?
+                                                      "./img/Placeholders/Logo_Placeholder.png" : 
+                                                      "./img/Brand_logo/".$item['brand_logo'];
+                                                ?>
+                                                " alt="product" class="rounded mx-auto d-block"></a>
                                           <h6><?php echo $item['brand_name']?></h6>
                                     </div>
                               </div>

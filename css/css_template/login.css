@@ -1,6 +1,12 @@
+.form {
+      height: 100vh;
+
+}
+
+
 .form .container {
-      height: 700px;
       padding-top: 6%;
+
 }
 
 .form .row {

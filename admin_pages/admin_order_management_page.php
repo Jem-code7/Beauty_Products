@@ -1,9 +1,9 @@
 <?php
       include_once "./main_template/metadata.php";
-      include_once './eventhandler_DB/login-admin-checker.php';
+      include_once '../eventhandler_DB/login-admin-checker.php';
 ?>
 <body>
-      <?php include_once './section_template/admin_header.php'?>
+      <?php include_once '../section_template/admin_header.php'?>
 
             <section class="main-content grad-pink-cream" style="padding-bottom: 10%;">
                   <div class="mx-5">
@@ -48,14 +48,14 @@
                                                 $i++;
                                           endwhile;
                                     }
-                                    else { echo "<tr><td colspan='9'><div class='text-center text-danger'>No Available Item</div></td></tr>";}
+                                    else { echo "<tr><td colspan='9'><div class='text-center text-danger' style='height: 50vh'>No Available Item</div></td></tr>";}
                               endif;
                         ?>
                         </table>
                   </div>
             </section>
 
-            <?php include './section_template/footer_footer.php' ?>
+            <?php include './main_template/footer_footer.php' ?>
 
             <?php include_once './main_template/script.php'; ?>
       </section>

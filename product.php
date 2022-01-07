@@ -9,7 +9,7 @@
 
     <section class="main-content grad-pink-cream pb-5">
 
-      <div class="container-fluid justify-content-center">
+      <div class="container-fluid justify-content-center" style="min-height:100vh">
             <div class="row px-5 mx-5 py-3">
                   <div class="col-lg-4 mr-3 text-center border shadow" style="height: fit-content">
                         <img src="<?php echo ($rows['image'] != '')? "./img/Profiles/".$rows['image'] : "./img/Placeholders/No_Image_Placeholderpng.png"?>" class="d-block w-100" alt="..." style="height:500px">

@@ -1,9 +1,9 @@
-<footer class="footer py-5 black-bg">
+<footer class="footer py-5 black-bg mt-5">
       <div class="container-fluid w-75">
             <div class="row">
                   <div class="col-lg-3 col-12 text-white">
                   <h4>Coolest Beauty Products</h4>
-                  <img src="./img/logo-removebg-preview.png" class="img-fluid px-auto">
+                  <img src="../img/logo-removebg-preview.png" class="img-fluid px-auto">
                   </div>
                   <div class="col-lg-3 col-12 text-white">
                   <h4>Explore</h4>

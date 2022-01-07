@@ -1,6 +1,7 @@
 <section class="banner grad-pink-cream">
       <div class="p-4">
-            <a href="./index.php" class="float-left"><img src="./img/logo-removebg-preview.png" alt="" style="width:8em"></a>
+            <a href="../index.php" class="float-left"><img src="../img/logo-removebg-preview.png" alt="" style="width:8em"></a>
+            <a href="../index.php" class="float-right invisible"><img src="../img/logo-removebg-preview.png" alt="" style="width:8em"></a>
             <h1 class="text-center" style="padding-top:1em; padding-bottom:1em;">Coolest Beauty Products</h1>
       </div>
 </section>
@@ -35,7 +36,7 @@
                         <button class="btn btn-outline-success m-2 fas fa-search" type="submit"></button>
                   </form>
                   <form class="flex icons mr-5">
-                        <a href="./logout.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
+                        <a href="./../logout.php" class="fa fa-user-circle p-2 rounded-pill white-bg">
                               <span class="black-color ff-andada"> Log Out </span>
                         </a>
                         <a href="./login_page.php" class="p-2 rounded-pill white-bg">
